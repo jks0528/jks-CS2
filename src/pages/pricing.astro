@@ -1,0 +1,121 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+
+const pricing = [
+  {
+    name: "Personal",
+    price: "Free",
+    popular: false,
+    features: [
+      "Lifetime free",
+      "Up to 3 users",
+      "Unlimited Pages",
+      "Astro Sub domain",
+      "Basic Integrations",
+      "Community Support",
+    ],
+    button: {
+      Text: "Get Started",
+      link: "/",
+    },
+  },
+  {
+    name: "Startup",
+    price: {
+      monthly: "$19",
+      annual: "$16",
+      discount: "10%",
+      original: "$24",
+    },
+    popular: true,
+    features: [
+      "All Free Features",
+      "Up to 20 users",
+      "20 Custom domains",
+      "Unlimited Collaborators",
+      "Advanced Integrations",
+      "Priority Support",
+    ],
+    button: {
+      text: "Get Started",
+      link: "#",
+    },
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    popular: false,
+    features: [
+      "All Pro Features",
+      "Unlimited Custom domains",
+      "99.99% Uptime SLA",
+      "SAML & SSO Integration",
+      "Dedicated Account Manager",
+      "24/7 Phone Support",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <div>
+      <h1 class="text-4xl lg:text-3xl xl:text-4xl font-bold xl:tracking-tighter"> </h1>
+        
+    </div>
+    <br>
+
+    <body class="flex items-center justify-center min-h-screen bg-gray-100">
+      <h1 class="text-4xl lg:text-3xl xl:text-4xl font-bold xl:tracking-tighter 
+      flex gap-10 md:gap-80 items-center justify-center mt-10 flex-wrap" 
+      style="text-indent:2rem" >
+        <strong>OD谈HooXi被下放：对G2新指挥依旧不甚看好</strong>
+      </h1>
+    </body>
+    <p>
+      <body>
+      <p class="flex gap-10 md:gap-80 items-center justify-center mt-10 flex-wrap" style="text-indent:2rem" >OD分享了自己对Rasmus Nielsen | HooXi被下放的看法。——“即使Wiktor Wojtas | TaZ担任指<br>
+    挥，HooXi成为教练，对G2来说也没什么问题。但不知为何，我觉得我们似乎在等待着G2另一名
+    <br>令人失望的新成员到来." 今天凌晨，G2宣布下放HooXi。目前尚不清楚谁会接替HooXi的位置。
+      </p>
+      <br>
+      <div ="center">
+      <img src="src/assets/OD谈呼吸下放.jpg" class="center-image" alt="OD谈呼吸下放"></img>
+      <br>
+      <br>
+      <h1 class=" text-4xl lg:text-3xl xl:text-4xl font-bold xl:tracking-tighter emphasize-text center-text"> 再见，诸葛呼吸!</h1>
+      <!-- 视频居中显示 -->
+    <div class="video-grid center">
+      <video controls  width="800" class="center-video">
+        <source src="src/assets/video/谢谢你，呼吸.mp4" type="video/mp4">
+      </video>
+    </div>
+      </div>
+
+    </body>
+</Container>
+</Layout>
+<style>
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .center-image {
+    margin: 0 auto;
+  }
+  .center-text {
+    text-align: center;
+  }
+  .center-video {
+    margin: 0 auto;
+  }
+  </style>
+
+

@@ -1,0 +1,49 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/免扣cs2.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-19 md:pb-24">
+  <div class="absolute top-0 right-0 flex items-center justify-center h-24 w-60"> <!-- Changed styles for positioning and centering -->
+    <Picture
+      src={heroImage}
+      alt="Astronaut in the air"
+      widths={[800, 800, 700]}
+      sizes="(max-width: 1000px ) 100vw, 920px" 
+      loading="eager"
+      format="avif"
+    />
+  </div>
+
+      <!-- Centered text container -->
+      <div class="flex items-center justify-center w-full h-full text-center" style="transform: translate(55%, 70%);">
+         <!-- Adjust translate(20%, 20%) as needed -->
+    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold  xl:tracking-tighter">
+      这里是属于CS玩家的一片天地
+    </h1>
+  </div>
+</main>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+
+    </p>
+    <div class="absolute top-0 left-0 mt-2 flex flex-col sm:flex-row gap-3">
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/jks0528?tab=repositories"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+      </Link>
+    </div>
+  </div>
+  <style>
+    .absolute {
+      position: absolute;
+    }
+  </style>
+</main>

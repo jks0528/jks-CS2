@@ -1,0 +1,53 @@
+---
+import Container from "@components/container.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Contact">
+  <Container>
+    <div>
+      <h1  class="text-5xl lg:text-6xl xl:text-7xl font-bold  xl:tracking-tighter flex gap-10 md:gap-80 items-center justify-center mt-10 flex-wrap"">开始跑图!</h1>
+      <Fragment slot="desc"> </Fragment>
+    </div>
+
+  <h1 class="flex gap-10 md:gap-80 items-center justify-center mt-10 flex-wrap" 
+    style="text-indent:rem">点击下方任意一张地图开始学习
+  </h1>
+    <!-- 添加一个容器来包裹图片 -->
+    <div class="image-container">
+      <a href="https://csnades.gg/mirage">
+      <img src="src/assets/map/mirage.png" alt="Mirage Map">
+      </a>
+      <a href="https://csnades.gg/dust2">
+      <img src="src/assets/map/dust2.png" alt="Dust2 Map">
+      </a>
+      <a href="https://csnades.gg/inferno">
+      <img src="src/assets/map/inferno.png" alt="Inferno Map" class="small-img">
+      </a>
+    </div>
+</Container>
+</Layout>
+<style>
+  .image-container {
+    display: flex;
+    justify-content: space-between; /* 设置图片之间的间距 */
+    align-items: center; /* 垂直居中 */
+    gap: 2px; /* 设置图片之间的间距 */
+    margin-top: 10px; /* 根据需要调整上边距 */
+  }
+  .image-container a {
+    flex: 1; /* 确保每个链接占据相等的空间 */
+    display: flex; /* 使链接内的图片居中 */
+    justify-content: center;
+    align-items: center;
+  }
+  .image-container img {
+    width: 800%; /* 设置图片宽度占满链接宽度 */
+    height: auto; /* 保持图片比例 */
+    max-width: 200px; /* 根据需要设置图片最大宽度 */
+  }
+  .image-container img.small-img {
+    max-width: 170px; /* 设置第三张图片的最大宽度 */
+  }
+</style>
